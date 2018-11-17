@@ -1,4 +1,4 @@
-#!/bin/bassh
+#!/bin/bash
 # 0xCCCCCCCC
 
 set -e
@@ -20,9 +20,9 @@ echo "Files are deployed to $INSTALL_DIR"
 
 # Setup init.sh
 
-if [ "$SHELL" = "/bin/zsh" ]; then
+if [[ "$SHELL" == *zsh ]]; then
     SHRC="$HOME/.zshrc"
-elif [ "$SHELL" = "/bin/bash" ]; then
+elif [[ "$SHELL" == *bash ]]; then
     SHRC="$HOME/.bashrc"
 fi
 
