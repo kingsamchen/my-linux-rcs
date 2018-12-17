@@ -1,0 +1,15 @@
+{
+    "shrc": {
+        "resource": "shrc.sh",
+        "deploy_target": "~/.rcs/shrc.sh",
+        "post_deploy": "VVNFPSJzb3VyY2UgJEhPTUUvLnJjcy9zaHJjLnNoIgpTSFJDPX4vLmBiYXNlbmFtZSAke1NIRUxMfWByYwppZiAhIGdyZXAgLUZ4cSAiJFVTRSIgJFNIUkM7IHRoZW4KICAgIGVjaG8gIiIgPj4gJFNIUkMKICAgIGVjaG8gJFVTRSA+PiAkU0hSQwogICAgc291cmNlICRTSFJDCmZp"
+    },
+    "tmux": {
+        "resource": "tmux.conf",
+        "deploy_target": "~/.tmux.conf"
+    },
+    "wget": {
+        "resource": "wgetrc",
+        "deploy_target": "~/.wgetrc"
+    }
+}
