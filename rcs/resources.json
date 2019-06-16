@@ -11,5 +11,9 @@
     "wget": {
         "resource": "wgetrc",
         "deploy_target": "~/.wgetrc"
+    },
+    "nvim": {
+        "resource": "nvim.init.vim",
+        "deploy_target": "~/.config/nvim/init.vim"
     }
 }

@@ -30,8 +30,7 @@ SHRC=~/.`basename ${SHELL}`rc
 if ! grep -Fxq "$NEW_PATH" $SHRC; then
     echo "" >> $SHRC
     echo $NEW_PATH >> $SHRC
-    source $SHRC
 fi
 
-VER=`rcs --version`
-echo "$VER has installed successfully!"
+echo "rcs has installed successfully! please source your shell rc manually!"
+
