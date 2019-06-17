@@ -5,6 +5,7 @@
 import argparse
 import base64
 import json
+import os
 import shutil
 import subprocess
 
@@ -53,7 +54,7 @@ def init_conf():
 
 
 def display_version():
-    ver = '0.1.0'
+    ver = '0.2.0'
     print('rcs ' + ver)
 
 
@@ -71,6 +72,11 @@ def deploy(item):
     item_conf = rcs_conf.resources[item]
     src = path.join(rcs_conf.repo, 'rcs', 'resources', item_conf['resource'])
     dest = path.expanduser(item_conf['deploy_target'])
+
+    dest_dir = path.dirname(dest)
+    if not path.exists(dest_dir):
+        os.makedirs(dest_dir)
+
     shutil.copy(src, dest)
 
     print('Done deploying {0} -> {1}'.format(src, dest))
