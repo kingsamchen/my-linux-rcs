@@ -27,3 +27,26 @@ if &listchars ==# 'eol:$'
 endif
 set list                " Show problematic characters.
 
+" Specify a directory for plugins
+" - For Neovim: ~/.local/share/nvim/plugged
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/.local/share/nvim/plugged')
+
+Plug 'vim-airline/vim-airline'
+
+Plug 'tyrannicaltoucan/vim-quantum'
+
+" Initialize plugin system
+call plug#end()
+
+let g:airline_theme='quantum'
+
+let g:molokai_original = 1
+let g:rehash256 = 1
+let g:quantum_black = 1
+
+set background=dark
+
+colorscheme quantum
+
+
