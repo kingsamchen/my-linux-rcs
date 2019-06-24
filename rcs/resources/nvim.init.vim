@@ -34,18 +34,18 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'vim-airline/vim-airline'
 
-Plug 'technetos/vim-quantum'
+Plug 'tyrannicaltoucan/vim-quantum'
 
 " Initialize plugin system
 call plug#end()
 
-let g:airline_theme='quantum'
+let g:airline_theme='term'
 
 let g:molokai_original = 1
+let g:rehash256 = 1
 let g:quantum_black = 1
 
 set background=dark
-set termguicolors
 
 colorscheme quantum
 
