@@ -19,6 +19,8 @@ if [ -d "/usr/local/go" ]; then
     export GOROOT=/usr/local/go
     export GOPATH=$HOME/go
     export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+
+    export GO111MODULE=on
 fi
 
 NODE_HOME="$HOME/Programs/node-v10.15.3-linux-x64"

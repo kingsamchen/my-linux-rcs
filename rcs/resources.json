@@ -15,5 +15,9 @@
     "nvim": {
         "resource": "nvim.init.vim",
         "deploy_target": "~/.config/nvim/init.vim"
+    },
+    "ssh_config": {
+        "resource": "ssh_config",
+        "deploy_target": "~/.ssh/config"
     }
 }
