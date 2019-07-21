@@ -6,10 +6,12 @@ case "$-" in
 esac
 
 if [ -n "$SSH_CLIENT" -a -n "$DISPLAY" ]; then
-    _RUNNING_FROM_SSH_X=2
+    _RUNNING_FROM_SSH_X=1
 fi
 
 if [ -n "$_RUNNING_FROM_SSH_X" ]; then
+    export GDK_SCALE=2
+
     bindkey "\033[1~" beginning-of-line
     bindkey "\033[4~" end-of-line
 fi
