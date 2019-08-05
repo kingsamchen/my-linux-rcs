@@ -10,7 +10,7 @@ if [ -n "$SSH_CLIENT" -a -n "$DISPLAY" ]; then
 fi
 
 if [ -n "$_RUNNING_FROM_SSH_X" ]; then
-    export GDK_SCALE=2
+    #export GDK_SCALE=2
 
     bindkey "\033[1~" beginning-of-line
     bindkey "\033[4~" end-of-line
@@ -36,4 +36,10 @@ if [ -d $LOCAL_BIN ]; then
 fi
 
 [[ -s "$HOME/.local/share/marker/marker.sh" ]] && source "$HOME/.local/share/marker/marker.sh"
+
+export PATH=$HOME/projects/anvil/launcher:$PATH
+
+rbg() {
+    $1 > /dev/null 2&>1 &
+}
 
