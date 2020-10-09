@@ -19,5 +19,9 @@
     "ssh_config": {
         "resource": "ssh_config",
         "deploy_target": "~/.ssh/config"
+    },
+    "bili_vpn": {
+        "resource": "bili_vpn.sh",
+        "deploy_target": "~/add_bili_vpn.sh"
     }
 }

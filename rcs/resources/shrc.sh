@@ -1,19 +1,13 @@
 
-# Do not source if not in the interactive shell.
-case "$-" in
+# If not running interactively, don't do anything
+case $- in
     *i*) ;;
-    *) return
+      *) return;;
 esac
 
 if [ -n "$SSH_CLIENT" -a -n "$DISPLAY" ]; then
-    _RUNNING_FROM_SSH_X=1
-fi
-
-if [ -n "$_RUNNING_FROM_SSH_X" ]; then
-    #export GDK_SCALE=2
-
-    bindkey "\033[1~" beginning-of-line
-    bindkey "\033[4~" end-of-line
+    bindkey '^[[H' beginning-of-line
+    bindkey '^[[F' end-of-line
 fi
 
 # Setup for Golang
@@ -23,12 +17,16 @@ if [ -d "/usr/local/go" ]; then
     export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
     export GO111MODULE=on
+    export GOPROXY=https://goproxy.cn
 fi
 
-NODE_HOME="$HOME/Programs/node-v10.15.3-linux-x64"
-if [ -d $NODE_HOME ]; then
-    export PATH=$NODE_HOME/bin:$PATH
-fi
+function goproxy.default {
+    export GOPROXY=https://goproxy.cn
+}
+
+function goproxy.bili {
+    export GOPROXY=http://goproxy.bilibili.co
+}
 
 LOCAL_BIN="$HOME/.local/bin"
 if [ -d $LOCAL_BIN ]; then

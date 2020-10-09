@@ -54,7 +54,7 @@ def init_conf():
 
 
 def display_version():
-    ver = '0.3.0'
+    ver = '0.4.0'
     print('rcs ' + ver)
 
 
